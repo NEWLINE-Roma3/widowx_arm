@@ -73,7 +73,7 @@ class WidowxGripper:
 			
 			self.desired_freq = rospy.get_param('~desired_freq', default = 10.0)
 			
-		except rospy.ROSException, e:
+		except rospy.ROSException as e:
 			rospy.logerr('%s: error getting params %s'%(rospy.get_name(), e))
 			exit()
 
