@@ -87,3 +87,23 @@ Open the RVIZ tool and add the plugins you need to visualize the arm
 ```
 rosrun rviz rviz
 ```
+
+## Simulation on Gazebo and rviz
+
+### Visualizing the robot 
+
+```
+roslaunch widowx_arm_controller widowx_arm_control_sim.launch
+```
+
+### Commanding the controller 
+
+```
+rostopic pub -1 /widowx_arm/joint_1_controller/command std_msgs/Float64 "data: 0.0"
+rostopic pub -1 /widowx_arm/joint_2_controller/command std_msgs/Float64 "data: -1.1"
+rostopic pub -1 /widowx_arm/joint_3_controller/command std_msgs/Float64 "data: -1.1"
+rostopic pub -1 /widowx_arm/joint_4_controller/command std_msgs/Float64 "data: -1.1"
+rostopic pub -1 /widowx_arm/joint_5_controller/command std_msgs/Float64 "data: -1.1"
+rostopic pub -1 /widowx_arm/gripper_controller/command std_msgs/Float64 "data: 0.0" 
+rostopic pub -1 /widowx_arm/gripper_mimic_controller/command std_msgs/Float64 "data: 0.0"
+```
