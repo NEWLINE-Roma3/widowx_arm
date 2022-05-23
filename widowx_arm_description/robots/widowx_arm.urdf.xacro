@@ -1,12 +1,9 @@
 <?xml version="1.0" ?>
-<robot name="widowx_arm" xmlns:xacro="http://ros.org/wiki/xacro">
-	<xacro:include filename="$(find widowx_arm_description)/urdf/widowx.urdf.xacro"/>
-	 <link name="world" />
-	 <joint name="world_joint" type="fixed">
-		<parent link="world" />
-		<child link = "base_footprint" />
-		<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
-	 </joint>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="widowx_arm">
+<xacro:include filename="$(find widowx_arm_description)/urdf/common_materials.xacro" />
+
+	<link name="world"/>
+
 	<link name="base_footprint">
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -15,7 +12,18 @@
 			</geometry>
 		</visual>
 	</link>
-	<xacro:widowx_arm parent="base_footprint" prefix="">
-		<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-	</xacro:widowx_arm>
+	
+	<joint name="fixed" type="fixed">
+    	<origin xyz="0 0 0" rpy="0 0 0"/>
+    	<parent link="world"/>
+    	<child link="base_footprint"/>
+  	</joint>
+
+	<xacro:include filename="$(find widowx_arm_description)/urdf/widowx.urdf.xacro"/>
+	<xacro:widowx_arm parent="base_footprint">
+    	<origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:widowx_arm>
+
+	<xacro:include filename="$(find widowx_arm_description)/urdf/gazebo_plugins.xacro"/>
+
 </robot>
