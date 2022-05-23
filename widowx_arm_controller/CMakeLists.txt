@@ -4,6 +4,9 @@ project(widowx_arm_controller)
 find_package(catkin REQUIRED COMPONENTS
   rospy 
   arbotix_python
+  controller_manager
+  joint_state_controller
+  robot_state_publisher
 )
 
 catkin_python_setup()
