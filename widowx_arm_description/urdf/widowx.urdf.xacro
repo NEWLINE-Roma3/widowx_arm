@@ -4,8 +4,8 @@
    <xacro:property name="M_PI" value="3.14159"/>
    
    <xacro:include filename="$(find widowx_arm_description)/urdf/common_materials.xacro" />
-  
    <xacro:macro name="widowx_arm" params="parent *origin">
+      <xacro:include filename="$(find widowx_arm_description)/urdf/gazebo_plugins.xacro"/>
       <!-- links -->
       <link name="arm_base_link">
          <visual>
@@ -271,5 +271,4 @@
       </joint>
       
    </xacro:macro>
-
 </robot>
