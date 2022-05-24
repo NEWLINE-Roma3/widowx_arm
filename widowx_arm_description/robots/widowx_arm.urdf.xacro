@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="widowx_arm">
-<xacro:include filename="$(find widowx_arm_description)/urdf/common_materials.xacro" />
+	<xacro:include filename="$(find widowx_arm_description)/urdf/common_materials.xacro"/>
 
 	<link name="world"/>
 
@@ -24,6 +24,5 @@
     	<origin xyz="0 0 0" rpy="0 0 0" />
     </xacro:widowx_arm>
 
-	<xacro:include filename="$(find widowx_arm_description)/urdf/gazebo_plugins.xacro"/>
 
 </robot>
