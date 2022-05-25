@@ -202,7 +202,7 @@
          <parent link="arm_base_link" />
          <child link="shoulder_link" />
          <axis xyz="0 0 1" />
-         <limit lower="-2.617" upper="2.617" effort="0" velocity="0.785" />
+         <limit lower="-2.617" upper="2.617" effort="6" velocity="0.785" />
       </joint>
 
       <joint name="joint_2" type="revolute">
@@ -211,7 +211,7 @@
          <parent link="shoulder_link" />
          <child link="biceps_link" />
          <axis xyz="0 1 0" />
-         <limit lower="-1.571" upper="1.571" effort="0" velocity="1.571" />
+         <limit lower="-1.571" upper="1.571" effort="6" velocity="1.571" />
       </joint>
 
       <joint name="joint_3" type="revolute">
@@ -219,7 +219,7 @@
          <parent link="biceps_link" />
          <child link="forearm_link" />
          <axis xyz="0 1 0" />
-         <limit lower="-1.571" upper="1.571" effort="0" velocity="1.571" />
+         <limit lower="-1.571" upper="1.571" effort="6" velocity="1.571" />
       </joint>
 
       <joint name="joint_4" type="revolute">
@@ -227,7 +227,7 @@
          <parent link="forearm_link" />
          <child link="wrist_1_link" />
          <axis xyz="0 1 0" />
-         <limit lower="-1.745" upper="1.745" effort="0" velocity="1.571" />
+         <limit lower="-1.745" upper="1.745" effort="6" velocity="1.571" />
       </joint>
 
       <joint name="joint_5" type="revolute">
@@ -235,7 +235,7 @@
          <parent link="wrist_1_link" />
          <child link="wrist_2_link" />
          <axis xyz="0 0 1" />
-         <limit lower="-2.617" upper="2.617" effort="0" velocity="1.571" />
+         <limit lower="-2.617" upper="2.617" effort="6" velocity="1.571" />
       </joint>
 
       <joint name="joint_6" type="fixed">
@@ -243,7 +243,7 @@
          <parent link="wrist_2_link" />
          <child link="gripper_rail_link" />
          <axis xyz="0 0 1" />
-         <limit lower="-0.31" upper="0.1" effort="0" velocity="0.5" />
+         <limit lower="-0.31" upper="0.1" effort="6" velocity="0.5" />
       </joint>
 
      <!--joint name="gripper_revolute_joint" type="revolute">
@@ -258,7 +258,7 @@
          <parent link="gripper_rail_link" />
          <child link="gripper_1_link" />
          <axis xyz="0 -1 0" />
-         <limit lower="0" upper="0.027" effort="0" velocity="0.5" />
+         <limit lower="0" upper="0.027" effort="6" velocity="0.5" />
       </joint>
 
       <joint name="gripper_prismatic_joint_2" type="prismatic">
@@ -267,7 +267,7 @@
          <child link="gripper_2_link" />
          <mimic joint="gripper_prismatic_joint_1" />
          <axis xyz="0 1 0" />
-         <limit lower="0" upper="0.027" effort="0" velocity="0.5" />
+         <limit lower="0" upper="0.027" effort="6" velocity="0.5" />
       </joint>
       
    </xacro:macro>
