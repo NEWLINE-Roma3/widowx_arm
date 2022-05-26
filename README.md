@@ -107,3 +107,7 @@ rostopic pub -1 /widowx_arm/joint_5_controller/command std_msgs/Float64 "data: -
 rostopic pub -1 /widowx_arm/gripper_controller/command std_msgs/Float64 "data: 0.0" 
 rostopic pub -1 /widowx_arm/gripper_mimic_controller/command std_msgs/Float64 "data: 0.0"
 ```
+
+## License
+
+The new stl file are se the BSD 3-clause license and are Copyright (C) University of Cincinnati.
